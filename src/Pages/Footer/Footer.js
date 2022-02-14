@@ -12,7 +12,9 @@ const Footer = () => {
             <div className="row">
               <div className="col-md-3 col-10 mx-auto">
                 <div>
-                  <h3 className=" about pt-3">About Us</h3>
+                  <h3 id="footer" className=" about pt-3">
+                    About Us
+                  </h3>
                 </div>
                 <p className="footer_para">
                   Some say we’re Nashville, TN’s best kept secret for Automobile Repair, Service, and Maintenance. We’re proud of the work we do, and
@@ -36,7 +38,7 @@ const Footer = () => {
 
                       <li>
                         <FontAwesomeIcon className="footer_icon" icon={faAddressBook} />
-                       Automed Auto Service 1820 21st Ave S, Nashville, TN 00212
+                        Automed Auto Service 1820 21st Ave S, Nashville, TN 00212
                       </li>
                     </ul>
                   </div>

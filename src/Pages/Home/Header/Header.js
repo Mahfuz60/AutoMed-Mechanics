@@ -43,9 +43,9 @@ const Header = () => {
                 </Nav.Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link " to="/">
+                <Nav.Link className="nav-link "as={HashLink} to="/home#footer">
                   About
-                </Link>
+                </Nav.Link>
               </li>
 
               {user?.email ? (

@@ -7,7 +7,7 @@ const Login = () => {
   return (
     <div>
       <h2 className="pt-5">Please LogIn</h2>
-      <button onClick={googleSignIn} className="btn btn-warning">
+      <button onClick={googleSignIn} className="btn btn-warning mb-5">
         Google LogIn
       </button>
     </div>
