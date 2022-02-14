@@ -5,7 +5,7 @@ import { Nav } from "react-bootstrap";
 import useAuth from "../../../hooks/useAuth";
 
 const Header = () => {
-  const { user, logOut } =useAuth();
+  const { user, logOut } = useAuth();
   return (
     <div>
       <nav className="navbar navbar-expand-lg nav-header ">

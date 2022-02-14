@@ -1,30 +1,32 @@
-import { useEffect, useState } from "react";
-// import firebaseAuthenticationApp from "../Pages/Login/Firebase/FirebaseInitializeApp";
+import { useEffect } from "react";
+import { useState } from "react";
+import FirebaseAuthentication from "../../src/Pages/Login/Firebase/Firebase.init";
 import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } from "firebase/auth";
-import firebaseAuthenticationApp from "../Pages/Login/Firebase/FirebaseInitializeApp";
 
-firebaseAuthenticationApp();
-
+FirebaseAuthentication();
 const auth = getAuth();
-const googleSignInProvider = new GoogleAuthProvider();
+const googleProvider = new GoogleAuthProvider();
 
 const useFirebase = () => {
   const [user, setUser] = useState({});
   const [error, setError] = useState("");
 
-  //SignIn Method
+  //googleSignIn methods
   const googleSignIn = () => {
-    signInWithPopup(auth, googleSignInProvider)
+    signInWithPopup(auth, googleProvider)
       .then((result) => {
         setUser(result.user);
-        console.log(result.user);
       })
-      .catch((err) => {
-        setError(err.message);
+      .catch((error) => {
+        setError(error.message);
       });
   };
 
-  //observe UserS State Change
+  //logOut Method
+  const logOut = () => {
+    signOut(auth).then(() => {});
+  };
+  //User StateChange Methods
   useEffect(() => {
     const unsubscribed = onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -36,16 +38,11 @@ const useFirebase = () => {
     return () => unsubscribed;
   }, []);
 
-  //logout Method
-  const logOut = () => {
-    signOut(auth).then(() => {});
-  };
-
   return {
     googleSignIn,
-    logOut,
     user,
     error,
+    logOut,
   };
 };
 

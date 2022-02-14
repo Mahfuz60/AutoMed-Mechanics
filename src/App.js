@@ -5,7 +5,7 @@ import Header from "./Pages/Home/Header/Header";
 import NotFound from "./Pages/NotFound/NotFound";
 import Booking from "./Pages/Booking/Booking/Booking";
 import Login from "./Pages/Login/Login/Login";
-import AuthProvider from "./context/AuthProvider";
+import AuthProvider from "./context/AuthContext";
 
 function App() {
   return (

@@ -5,6 +5,7 @@ import mechanic2 from "../../../images/mechanic/mechanic-2.jpg";
 import mechanic3 from "../../../images/mechanic/mechanic-3.jpg";
 import mechanic4 from "../../../images/mechanic/mechanic-4.jpg";
 import mechanic5 from "../../../images/mechanic/mechanic-5.jpg";
+import mechanic6 from "../../../images/mechanic/mechanic-6.jpg";
 import Expert from "../Expert/Expert";
 
 const experts = [
@@ -29,8 +30,8 @@ const experts = [
     expertize: "-Alrounder Expert-",
   },
   {
-    img: mechanic2,
-    name: "John Anderson",
+    img: mechanic6,
+    name: "john Morgan",
     expertize: "-Polish Expert-",
   },
   {
