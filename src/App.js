@@ -6,6 +6,8 @@ import NotFound from "./Pages/NotFound/NotFound";
 import Booking from "./Pages/Booking/Booking/Booking";
 import Login from "./Pages/Login/Login/Login";
 import AuthProvider from "./context/AuthContext";
+import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
+import Footer from "./Pages/Footer/Footer";
 
 function App() {
   return (
@@ -23,14 +25,15 @@ function App() {
             <Route path="/login">
               <Login></Login>
             </Route>
-            <Route path="/booking/:serviceId">
+            <PrivateRoute path="/booking/:serviceId">
               <Booking></Booking>
-            </Route>
+            </PrivateRoute>
 
             <Route path="*">
               <NotFound></NotFound>
             </Route>
           </Switch>
+          <Footer></Footer>
         </Router>
       </AuthProvider>
     </div>

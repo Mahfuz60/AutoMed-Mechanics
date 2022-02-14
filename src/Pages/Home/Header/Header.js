@@ -1,6 +1,7 @@
 import React from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { Nav } from "react-bootstrap";
 import useAuth from "../../../hooks/useAuth";
 
@@ -32,12 +33,12 @@ const Header = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Nav.Link className="nav-link" href="/home#services">
+                <Nav.Link className="nav-link" as={HashLink} to="/home#services">
                   Services
                 </Nav.Link>
               </li>
               <li className="nav-item">
-                <Nav.Link href="/home#experts" className="nav-link">
+                <Nav.Link as={HashLink} to="/home#experts" className="nav-link">
                   Experts
                 </Nav.Link>
               </li>
