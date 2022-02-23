@@ -36,7 +36,7 @@ const UpdateService = () => {
     e.preventDefault();
   };
 
-  //OnChange From
+  //OnChange form handler
   const handleNameChange = (e) => {
     const updateName = e.target.value;
     const updateService = { name: updateName, description: service.description, price: service.price, img: service.img };
