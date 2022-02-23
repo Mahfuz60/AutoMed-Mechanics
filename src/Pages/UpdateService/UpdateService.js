@@ -18,7 +18,7 @@ const UpdateService = () => {
   }, []);
 
   const handleUpdateService = (e) => {
-    const url = `https://pacific-headland-83254.herokuapp.com/services/${id}`;
+    const url = `https://cryptic-brushlands-51201.herokuapp.com//services/${id}`;
     fetch(url, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
