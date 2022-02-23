@@ -7,7 +7,7 @@ const AddService = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     // console.log(data);
-    axios.post("http://localhost:8000/services", data)
+    axios.post("https://pacific-headland-83254.herokuapp.com/services", data)
     .then((res) => {
       // console.log(res);
       if (res.data.insertedId) {

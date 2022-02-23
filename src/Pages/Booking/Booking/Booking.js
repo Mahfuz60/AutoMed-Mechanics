@@ -7,7 +7,7 @@ const Booking = () => {
   const { serviceId } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:8000/services/${serviceId}`)
+    fetch(`https://pacific-headland-83254.herokuapp.com/services/${serviceId}`)
       .then((res) => res.json())
       .then((data) => {
         setService(data);
