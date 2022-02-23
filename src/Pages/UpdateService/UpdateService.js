@@ -9,7 +9,7 @@ const UpdateService = () => {
 
   //Find Service
   useEffect(() => {
-    fetch(`http://localhost:8000/services/${id}`)
+    fetch(`https://cryptic-brushlands-51201.herokuapp.com/services/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setService(data);
@@ -18,7 +18,7 @@ const UpdateService = () => {
   }, []);
 
   const handleUpdateService = (e) => {
-    const url = `https://cryptic-brushlands-51201.herokuapp.com//services/${id}`;
+    const url = `https://cryptic-brushlands-51201.herokuapp.com/services/${id}`;
     fetch(url, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },

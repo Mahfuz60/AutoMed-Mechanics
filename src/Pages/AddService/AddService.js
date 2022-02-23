@@ -7,7 +7,7 @@ const AddService = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     // console.log(data);
-    axios.post("https://cryptic-brushlands-51201.herokuapp.com//services", data)
+    axios.post("https://cryptic-brushlands-51201.herokuapp.com/services", data)
     .then((res) => {
       // console.log(res);
       if (res.data.insertedId) {
