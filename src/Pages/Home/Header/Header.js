@@ -43,7 +43,7 @@ const Header = () => {
                 </Nav.Link>
               </li>
               <li className="nav-item">
-                <Nav.Link className="nav-link "as={HashLink} to="/home#footer">
+                <Nav.Link className="nav-link " as={HashLink} to="/home#footer">
                   About
                 </Nav.Link>
               </li>
